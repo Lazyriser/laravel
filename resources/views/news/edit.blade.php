@@ -14,16 +14,16 @@
         @csrf
         @method('PUT')
         <label for="news__name">Name
-            <input name="News Name" id="news__name" value="{{ $news->name }}">
+            <input name="news_name" id="news__name" value="{{ $news->name }}">
         </label>
         <label for="news__shortdesc">Short Description
-            <input name="Short Description" id="news__shortdesc" value="{{ $news->shortdesc }}">
+            <input name="short_desc" id="news__shortdesc" value="{{ $news->shortdesc }}">
         </label>
         <label for="news__content">Content
-            <input name="News Content" id="news__content" value="{{ $news->content }}">
+            <input name="news_content" id="news__content" value="{{ $news->content }}">
         </label>
         <label for="news__author">Author
-            <input name="News Author" id="news__author" value="{{ $news->author }}">
+            <input name="news_author" id="news__author" value="{{ $news->author }}">
         </label>
         <input type="submit" value="Edit">
     </form>

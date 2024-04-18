@@ -64,12 +64,12 @@ class NewsController extends Controller
 	public function update(Request $request, string $id)
 	{
 		$news = News::findOrFail($id);
-		
+
 		$news->update([
-			'name' => $request->get('News_Name'), // откуда взялись именно такие названия у ключей? они больше нигде не фигурируют
-			'shortdesc' => $request->get('News_Shortdesc'), // почему конкретно это значение не сохраняется?
-			'content' => $request->get('News_Content'),
-			'author' => $request->get('News_Author'),
+			'name' => $request->get('news_name'), // откуда взялись именно такие названия у ключей? они больше нигде не фигурируют
+			'shortdesc' => $request->get('short_desc'),
+			'content' => $request->get('news_content'),
+			'author' => $request->get('news_author'),
 		]);
 
 		return route('news.show', $news->id);
